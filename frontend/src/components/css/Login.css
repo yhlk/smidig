@@ -26,6 +26,7 @@ body, html {
 .login-logo {
   height: 20vmin; /* Adjust the height as needed */
   max-width: 100%;
+  
 }
 
 .login-content {
@@ -58,20 +59,20 @@ form input {
   margin: 5px 0;
   border: none;
   border-radius: 5px;
-  width: 80%;
-  max-width: 300px;
+  width: 90% !important;
+  max-width: 600px !important;
 }
 
 form button {
   padding: 10px 20px;
   margin-top: 10px;
-  background-color: #28a745;
+  background-color: #6EE47E;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 80%;
-  max-width: 300px;
+  width: 90% !important;
+  max-width: 600px !important;
 }
 
 form button:hover {
