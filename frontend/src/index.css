@@ -1,8 +1,96 @@
-body {
+/* Reset some basic elements */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+/* Set a basic font and background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #333;
+}
+
+/* Set default styles for app container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style header and logo */
+.App-header {
+  background-color: #1a1a1a;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-logo {
+  height: 20vmin; /* Adjust the height as needed */
+  max-width: 100%; /* Ensure it doesn't exceed the container */
+  pointer-events: none;
+}
+
+/* Style links */
+a {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Set link color */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style buttons */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hide content in portrait mode */
+@media screen and (orientation: portrait) {
+  .orientation-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .main-content {
+    display: none;
+  }
+}
+
+/* Show content in landscape mode */
+@media screen and (orientation: landscape) {
+  .orientation-message {
+    display: none;
+  }
+
+  .main-content {
+    display: block;
+  }
+}
+
+/* Add more global styles as needed */
