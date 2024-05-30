@@ -23,7 +23,7 @@ function Login({ onLogin }) {
           <button type="submit">Enter</button>
         </form>
         <footer className="login-footer">
-          <small>Terms - contact@loading.no</small>
+          <p><small>Terms - contact@loading.no</small></p>
         </footer>
       </div>
     </div>

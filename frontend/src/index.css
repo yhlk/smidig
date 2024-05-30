@@ -7,9 +7,9 @@
 }
 
 /* Set a basic font and background color */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
+body, h1, h2, h4, h5, h6, p, a, span, div {
+  font-family: 'Aldrich', sans-serif;
+  background-color: #0B1215;
   color: #333;
 }
 
