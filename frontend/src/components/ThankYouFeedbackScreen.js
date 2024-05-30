@@ -9,10 +9,10 @@ const ThankYouFeedbackScreen = () => {
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
-      <h2>Takk</h2>
+      <h2>Takk for tilbakemeldingene dine!</h2>
       <div className="stars">
-        {[...Array(5)].map((star, index) => (
-          <span key={index}>x</span>
+        {[...Array(5)].map((_, index) => (
+          <span key={index} className="star">&#9733;</span>
         ))}
       </div>
     </div>

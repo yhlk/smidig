@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set the height to cover the entire viewport height */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #000000; /* Set background color to black */
+    color: #ffffff; /* Set text color to white for contrast */
+    font-family: Arial, sans-serif; /* Choose a readable font */
+}
