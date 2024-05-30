@@ -9,8 +9,8 @@
 /* Set a basic font and background color */
 body {
   font-family: Arial, sans-serif;
-  background-color: #0b1215;
-  color: #333;
+  background-color: #0B1215;
+  color: #FFFFFF;
 }
 
 /* Set default styles for app container */
@@ -21,7 +21,7 @@ body {
 
 /* Style header and logo */
 .App-header {
-  background-color: #0b1215;
+  background-color: #0B1215;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -29,8 +29,7 @@ body {
   justify-content: center;
   padding: 20px;
   font-size: calc(10px + 2vmin);
-  color: white;
-  margin-top: 10rem;
+  color: #FFFFFF;
 }
 
 
