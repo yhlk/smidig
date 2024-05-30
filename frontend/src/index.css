@@ -1,4 +1,4 @@
-/* Reset some basic elements */
+/* Global resets */
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +7,10 @@
 }
 
 /* Set a basic font and background color */
-body, h1, h2, h4, h5, h6, p, a, span, div {
-  font-family: 'Aldrich', sans-serif;
+* {
+  font-family: 'Aldrich', sans-serif; /* Unified font family */
   background-color: #0B1215;
-  color: #333;
+  color: #FFFFFF; /* Unified color */
 }
 
 /* Set default styles for app container */
@@ -21,7 +21,7 @@ body, h1, h2, h4, h5, h6, p, a, span, div {
 
 /* Style header and logo */
 .App-header {
-  background-color: #0b1215;
+  background-color: #0B1215;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -29,13 +29,15 @@ body, h1, h2, h4, h5, h6, p, a, span, div {
   justify-content: center;
   padding: 20px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFFFF;
+  
 }
 
 .App-logo {
   height: 20vmin; /* Adjust the height as needed */
   max-width: 100%; /* Ensure it doesn't exceed the container */
   pointer-events: none;
+  
 }
 
 /* Style links */

@@ -1,38 +1,6 @@
-/* Reset some basic elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* Set a basic font and background color */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #0B1215;
-  color: #FFFFFF;
-}
-
-/* Set default styles for app container */
-.App {
-  text-align: center;
-  padding: 20px;
-}
+/* Specific styles for the App component */
 
 /* Style header and logo */
-.App-header {
-  background-color: #0B1215;
-  min-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  font-size: calc(10px + 2vmin);
-  color: #FFFFFF;
-}
-
-
 .App-header.default {
   margin-top: 10rem; /* Apply margin-top only when not in decision screen */
 }
@@ -41,54 +9,9 @@ body {
   margin-top: 0; /* Remove margin-top when in decision screen */
 }
 
-
-.App-logo {
-  height: 20vmin; /* Adjust the height as needed */
-  max-width: 100%; /* Ensure it doesn't exceed the container */
-  pointer-events: none;
-}
-
-/* Style links */
-a {
-  text-decoration: none; /* Remove underline */
-  color: #007bff; /* Set link color */
-}
-
-a:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Hide content in portrait mode */
-@media screen and (orientation: portrait) {
-  .orientation-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #0b1215;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .main-content {
-    display: none;
-  }
-}
-
-/* Show content in landscape mode */
-@media screen and (orientation: landscape) {
-  .orientation-message {
-    display: none;
-  }
-
-  .main-content {
-    display: block;
-  }
-}
-
+/* Hide logo when decision screen is active */
 .decision-screen-active .App-logo {
-  display: none; /* Hide loading logo when decision screen is active */
+  display: none;
 }
+
+/* Add more App-specific styles as needed */
