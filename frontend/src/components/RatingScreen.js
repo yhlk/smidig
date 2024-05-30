@@ -13,6 +13,8 @@ const RatingScreen = ({ onComplete }) => {
   return (
     <div className="rating-screen">
       <div className="header">
+        <h1 className='H1'>Thank you for playing</h1>
+        <h1 className='H2'>Please rate your experience</h1>
         <span className="user-icon">'ikon'</span>
         <span className="user-label">Player</span>
       </div>

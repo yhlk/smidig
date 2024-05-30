@@ -1,4 +1,24 @@
 .rating-screen {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
 
+  H1{
+    color: white;
+    margin-top: 30px;
+  }
+
+  H2{
+    color: white;
+    margin-top: -100px;
+  }
+
+  .user-icon{
+    margin-top: 2000px;
   }
   
+  .user-tool{
+
+  }
