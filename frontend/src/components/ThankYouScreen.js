@@ -8,7 +8,7 @@ const ThankYouScreen = ({ onReview }) => {
         <span className="user-icon">'ikon'</span>
         <span className="user-label">Player</span>
       </div>
-      <h1 className="title">Review</h1>
+      <h1 className="title">Thank you for playing!</h1>
       <button className="review-button" onClick={onReview}>Review</button>
     </div>
   );

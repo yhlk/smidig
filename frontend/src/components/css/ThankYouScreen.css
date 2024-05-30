@@ -1,3 +1,18 @@
 .thankyou-screen {
    
   }
+
+.review-button {
+    background-color: green; /* Set background color to green */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 1em; /* Adjust font size */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 20px; /* Add space above the button */
+  }
+  
+.review-button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+  }
