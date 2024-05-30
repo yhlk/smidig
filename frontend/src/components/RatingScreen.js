@@ -19,7 +19,7 @@ const RatingScreen = ({ onComplete }) => {
       <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
-      <h2 className='H2'>Sound?</h2>
+      <h2 className='question'>Sound?</h2>
       <div className="stars">
         {[...Array(5)].map((star, index) => {
           index += 1;
