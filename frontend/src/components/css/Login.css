@@ -1,10 +1,11 @@
 
 
-body, html {
+body, html, p {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Remove scrollbar */
   height: 100%;
+  color: #FFFFFF;
 }
 
 .login-container {
@@ -13,7 +14,7 @@ body, html {
   align-items: center;
   justify-content: flex-start; /* Align items to the start */
   min-height: 100vh;
-  background-color: #1a1a1a;
+  background-color: #0B1215;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -26,7 +27,6 @@ body, html {
 .login-logo {
   height: 20vmin; /* Adjust the height as needed */
   max-width: 100%;
-  
 }
 
 .login-content {
@@ -55,28 +55,35 @@ form {
 }
 
 form input {
+  background-color: #B3B3B3;
   padding: 10px;
   margin: 5px 0;
   border: none;
-  border-radius: 5px;
-  width: 90% !important;
-  max-width: 600px !important;
+  border-radius: 25px;
+  width: 300px !important;
+  max-width: 100% !important;
+}
+
+form input::placeholder {
+  font-family: 'Aldrich', sans-serif;
+  color: #FFFFFF; /* Set placeholder/background color in input field */
 }
 
 form button {
+  font-family: 'Aldrich', sans-serif;
   padding: 10px 20px;
   margin-top: 10px;
-  background-color: #6EE47E;
+  background-color: #218838;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  width: 90% !important;
-  max-width: 600px !important;
+  width: 100px !important;
+  max-width: 100% !important;
 }
 
 form button:hover {
-  background-color: #218838;
+  background-color: #6EE47E;
 }
 
 .login-footer {
