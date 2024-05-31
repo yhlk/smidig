@@ -6,8 +6,8 @@ import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-so
 const ThankYouFeedbackScreen = () => {
   return (
     <div className="thankyou-feedback-screen">
-      <div className="header">
-        <span className="user-icon">'ikon'</span>
+      <div className="Player-icon">
+        <span className="user-icon">🔹</span>
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>

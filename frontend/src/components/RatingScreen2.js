@@ -14,8 +14,8 @@ const RatingScreen2 = ({ onComplete }) => {
 
   return (
     <div className="rating-screen2">
-      <div className="header">
-        <span className="user-icon">'ikon'</span>
+      <div className="Player-icon">
+        <span className="user-icon">🔹</span>
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
