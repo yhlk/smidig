@@ -9,7 +9,6 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .decision-screen {
@@ -23,7 +22,6 @@ body, html {
   margin: 0;
   position: relative;
   box-sizing: border-box;
-  
 }
 
 .header {
@@ -33,7 +31,6 @@ body, html {
   width: 100%;
   box-sizing: border-box;
   z-index: 1; /* Ensure header is above other content */
-  
 }
 
 .user-icon {
@@ -48,6 +45,7 @@ body, html {
   border-radius: 5px;
   margin-top: -8px;
 }
+
 
 h1 {
   color: white;
@@ -111,6 +109,7 @@ h1 {
   z-index: 1; /* Ensure image is above other content */
   margin-bottom: -30px;
 }
+
 .decision-image {
   max-width: 120%;
   max-height: 120%;
@@ -120,8 +119,26 @@ h1 {
 .timer {
   margin-top: 20px; /* Adjust margin as needed */
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
 .timer span {
   font-weight: bold;
+}
+
+.clock {
+  width: 30px;
+  height: 30px;
+  border: 4px solid white;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/DecisionScreen.css';
 import untilImage from '../until.png'; // Adjust the path according to your project structure
 
 const DecisionScreen = ({ onDecisionComplete }) => {
+  const [timeLeft, setTimeLeft] = useState(100);
+
+  useEffect(() => {
+    if (timeLeft > 0) {
+      const timerId = setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+      return () => clearInterval(timerId);
+    } else {
+      onDecisionComplete();
+    }
+  }, [timeLeft, onDecisionComplete]);
+
   const handleOptionClick = () => {
     onDecisionComplete();
   };
@@ -20,7 +33,6 @@ const DecisionScreen = ({ onDecisionComplete }) => {
           <button className="option-button red" onClick={handleOptionClick}>KILL</button>
         </div>
         <div className="image-placeholder">
-          {/* Add the image here */}
           <img src={untilImage} alt="What should Magnus do next decision screen" className="decision-image" />
         </div>
         <div className="right-options">
@@ -29,7 +41,8 @@ const DecisionScreen = ({ onDecisionComplete }) => {
         </div>
       </div>
       <div className="timer">
-        Time left: <span id="timer">00:20</span> sec
+        <div className="clock"></div>
+        Time left: <span id="timer">{timeLeft < 10 ? `0${timeLeft}` : timeLeft}</span> sec
       </div>
     </div>
   );

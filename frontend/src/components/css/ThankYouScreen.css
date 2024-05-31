@@ -27,3 +27,10 @@
 .thankyou-screen {
   margin-bottom: 150px;
 }
+
+.Player-icon {
+  position: fixed;
+  top: 35px;
+  right: 15px;
+
+}

@@ -82,3 +82,9 @@ a:hover {
 }
 
 /* Add more global styles as needed */
+.Player-icon {
+  position: fixed;
+  top: 35px;
+  right: 15px;
+
+}

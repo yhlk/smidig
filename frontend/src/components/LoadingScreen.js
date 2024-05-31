@@ -27,6 +27,10 @@ const LoadingScreen = ({ onLoadingComplete, question }) => {
 
   return (
     <div className="loading-screen">
+      <div className="Player-icon">
+        <span className="user-icon">🔹</span>
+        <span className="user-label">Player</span>
+      </div>
       <div className="question">{question}</div>
       <div className="stopwatch">
         <div className="spinner"></div>

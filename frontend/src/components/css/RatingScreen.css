@@ -1,4 +1,21 @@
-.rating-screen {
+.question{
+  font-size: 70px;
+  color: white;
+}
 
-  }
+
+.star-on {
+  color: gold;
   
+}
+
+.star-off {
+  color: #ccc; 
+
+}
+.stars{
+  font-size: 100px;
+  margin-top: 60px;
+}
+
+
