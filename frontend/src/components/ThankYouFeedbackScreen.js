@@ -4,15 +4,15 @@ import './css/ThankYouFeedbackScreen.css';
 const ThankYouFeedbackScreen = () => {
   return (
     <div className="thankyou-feedback-screen">
-      <div className="header">
-        <span className="user-icon">'ikon'</span>
+      <div className="Player-icon">
+        <span className="user-icon">🔹</span>
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
-      <h2>Takk</h2>
+      <h2 className='thanku'>Thank you for your feedback!</h2>
       <div className="stars">
-        {[...Array(5)].map((star, index) => (
-          <span key={index}>x</span>
+        {[...Array(5)].map((_, index) => (
+          <span key={index} className="star">&#9733;</span>
         ))}
       </div>
     </div>

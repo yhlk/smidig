@@ -1,0 +1,17 @@
+/* Specific styles for the App component */
+
+/* Style header and logo */
+.App-header.default {
+  margin-top: 10rem; /* Apply margin-top only when not in decision screen */
+}
+
+.App-header.decision {
+  margin-top: 0; /* Remove margin-top when in decision screen */
+}
+
+/* Hide logo when decision screen is active */
+.decision-screen-active .App-logo {
+  display: none;
+}
+
+/* Add more App-specific styles as needed */
