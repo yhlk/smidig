@@ -1,3 +1,36 @@
+/* ReviewButton.css */
+.review-button {
+  background-color: green; /* Set background color to green */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for size */
+  font-size: 1em; /* Adjust font size */
+  cursor: pointer; /* Change cursor on hover */
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.review-button:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}
+
+.title {
+  margin: 10px 0;
+}
+
+.subtitle  { 
+  margin-top:0px ;
+}
+
+
 .thankyou-screen {
-   
-  }
+  margin-bottom: 150px;
+}
+
+.Player-icon {
+  position: fixed;
+  top: 35px;
+  right: 15px;
+
+}
