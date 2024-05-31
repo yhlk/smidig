@@ -1,49 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './css/LoadingScreen.css';
 
-const LoadingScreen = ({ onLoadingComplete, question }) => {
-  const [countdown, setCountdown] = useState(10);
-
+const LoadingScreen = ({ onLoadingComplete }) => {
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCountdown(prevCountdown => {
-        if (prevCountdown > 0) {
-          return prevCountdown - 1;
-        } else {
-          return 10; // Reset countdown to 10 for infinite loading
-        }
-      });
-    }, 1000);
+    const timer = setTimeout(() => {
+      onLoadingComplete();
+    }, 1000); // Prøvde å legge til en timer for en eventuell loading screen? idk
 
-    const timeout = setTimeout(() => {
-      onLoadingComplete(); // Transition to the next screen after 5 seconds
-    }, 5000);
-
-    return () => {
-      clearInterval(timer);
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   return (
     <div className="loading-screen">
-      <div className="Player-icon">
-        <span className="user-icon">🔹</span>
+      <div className="header">
+        <span className="user-icon">'ikon'</span>
         <span className="user-label">Player</span>
       </div>
-      <div className="question">{question}</div>
-      <div className="stopwatch">
-        <div className="spinner"></div>
-      </div>
-      <div className="dots">
-        {[...Array(10)].map((_, index) => (
-          <div
-            key={index}
-            className={`dot ${index < countdown ? 'active' : ''}`}
-          ></div>
-        ))}
-      </div>
-      <div className="waiting-text">Waiting for next question...</div>
+      <h1 className="title">LOADING</h1>
+      <p>placeholder</p>
     </div>
   );
 };
