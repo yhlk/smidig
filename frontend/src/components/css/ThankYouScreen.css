@@ -23,32 +23,14 @@
   margin-top:0px ;
 }
 
-.review-button{
-  background-color: rgb(111, 182, 5);
-  border-radius: 20px;
-  margin-top: 100px;
-  width: 110px;
-  height: 45px;
-  font-size: 20px;
+
+.thankyou-screen {
+  margin-bottom: 150px;
 }
 
-.review-button:hover{
- background-color: rgb(60, 153, 60);
-}
+.Player-icon {
+  position: fixed;
+  top: 35px;
+  right: 15px;
 
-.H1{
-  margin-top: 120px;
-  font-size: 60px;
-  font-family: 'Aldrich', sans-serif;
-  color: white;
-}
-.MM{
-  margin-top: 20px;
-  font-size: 50px;
-  color: white;
-}
-.H3{
-  margin-top: 20px;
-  font-size: 50px;
-  color: white;
 }
