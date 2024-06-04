@@ -1,5 +1,5 @@
-import React from 'react';
-import './css/ThankYouFeedbackScreen.css';
+import React from "react";
+import "./css/ThankYouFeedbackScreen.css";
 
 const ThankYouFeedbackScreen = () => {
   return (
@@ -12,7 +12,9 @@ const ThankYouFeedbackScreen = () => {
       <h2>Takk</h2>
       <div className="stars">
         {[...Array(5)].map((star, index) => (
-          <span key={index}>x</span>
+          <span key={index}>
+            <FontAwesomeIcon icon={"fa-regular fa-star"} />
+          </span>
         ))}
       </div>
     </div>
