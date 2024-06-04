@@ -64,6 +64,7 @@ function useFullScreenAndOrientation() {
 function App() {
   const [screen, setScreen] = useState('login');
   const [isPortrait, setIsPortrait] = useState(window.innerHeight > window.innerWidth);
+  const [nickname, setNickname] = useState(''); // State for nickname
 
   useFullScreenAndOrientation(); // Use the custom hook to prompt full-screen
 
@@ -78,7 +79,8 @@ function App() {
     };
   }, []);
 
-  const handleLogin = () => {
+  const handleLogin = (nickname) => {
+    setNickname(nickname); // Set nickname
     setScreen('loading');
   };
 
@@ -118,7 +120,7 @@ function App() {
             <img src={image} alt="Logo" className="App-logo" />
           </header>
           {screen === 'login' && <Login onLogin={handleLogin} />}
-          {screen === 'loading' && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
+          {screen === 'loading' && <LoadingScreen onLoadingComplete={handleLoadingComplete} nickname={nickname} />}
           {screen === 'decision' && <DecisionScreen onDecisionComplete={handleDecisionComplete} />}
           {screen === 'thankyou' && <ThankYouScreen onReview={handleReview} />}
           {screen === 'rating' && <RatingScreen onComplete={handleTheaterRating} />}

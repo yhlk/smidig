@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './css/LoadingScreen.css';
 
-const LoadingScreen = ({ onLoadingComplete, question }) => {
+const LoadingScreen = ({ onLoadingComplete, nickname, question }) => {
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const LoadingScreen = ({ onLoadingComplete, question }) => {
     <div className="loading-screen">
       <div className="Player-icon">
         <span className="user-icon">🔹</span>
-        <span className="user-label">Player</span>
+        <span className="user-label">{nickname}</span>
       </div>
       <div className="question">{question}</div>
       <div className="stopwatch">
