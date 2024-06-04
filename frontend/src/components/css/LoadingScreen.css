@@ -3,19 +3,19 @@
   flex-direction: column; /* Stack elements vertically */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  position: fixed; /* Overlay on the entire viewport */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  background-color: #0B1215; /* Semi-transparent black background */
   z-index: 9999; /* Ensure it is above other content */
+  margin-bottom: 130px;
 }
 
 .loading-screen .question {
   font-size: 2em; /* Adjust the font size for the question */
   text-align: center; /* Center text */
-  margin-bottom: 20px; /* Space between question and countdown */
+  margin-bottom: 10px; /* Space between question and countdown */
 }
 
 .loading-screen .stopwatch {
@@ -71,4 +71,28 @@
   100% {
       transform: rotate(360deg);
   }
+}
+
+.waiting-text {
+  margin-top: 15px;
+}
+
+.user-icon {
+  margin-right: 5px;
+  margin-top: -6px;
+  font-size: large;
+}
+
+.user-label {
+  background-color: #0B1215;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -8px;
+}
+
+.Player-icon {
+  position: fixed;
+  top: 35px;
+  right: 15px;
+
 }

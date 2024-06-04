@@ -12,25 +12,25 @@ const RatingScreen = ({ onComplete }) => {
 
   return (
     <div className="rating-screen">
-      <div className="header">
-        <span className="user-icon">'ikon'</span>
+      <div className="Player-icon">
+        <span className="user-icon">🔹</span>
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
-      <h2>Spørsmål 2?</h2>
+      <h2 className='question1'>Sound?</h2>
       <div className="stars">
         {[...Array(5)].map((star, index) => {
           index += 1;
           return (
             <span
               key={index}
-              className={index <= (hover || rating) ? 'star-on' : 'star-off'}
+              className = {index <= (hover || rating) ? 'star-on' : 'star-off'}
               onClick={() => handleClick(index)}
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
-          > x
-              
-            </span> 
+          > 
+          x
+            </span>
           );
         })}
       </div>
