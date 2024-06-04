@@ -30,7 +30,7 @@
   border: 10px solid rgba(255, 255, 255, 0.3); /* Light gray border */
   border-top: 10px solid #ffffff; /* White border on top */
   border-radius: 50%; /* Make it a circle */
-  animation: spin 2s linear infinite; /* Spin animation */
+  animation: spin 2s linear infinite; /* Spin animati */
   margin-bottom: 20px; /* Space between spinner and text */
   position: relative; /* To position countdown number inside */
 }
