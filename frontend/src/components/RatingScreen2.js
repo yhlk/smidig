@@ -31,7 +31,7 @@ const RatingScreen2 = ({ onComplete }) => {
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
             >
-              <FontAwesomeIcon icon={index <= (hover || rating) ? solidStar : regularStar} /> 
+              x
             </span>
           );
         })}
