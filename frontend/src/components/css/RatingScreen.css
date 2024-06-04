@@ -1,6 +1,9 @@
 .question{
   font-size: 70px;
   color: white;
+  
+  position: absolute;
+  align-content: center ;
 }
 
 
@@ -17,5 +20,3 @@
   font-size: 100px;
   margin-top: 60px;
 }
-
-

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './css/RatingScreen.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
 
 const RatingScreen = ({ onComplete }) => {
   const [rating, setRating] = useState(0);
@@ -16,7 +18,7 @@ const RatingScreen = ({ onComplete }) => {
         <span className="user-icon">🔹</span>
         <span className="user-label">Player</span>
       </div>
-      <h2>Spørsmål 1?</h2>
+      <h2 className='question'>Sound?</h2>
       <div className="stars">
         {[...Array(5)].map((star, index) => {
           index += 1;
@@ -27,9 +29,9 @@ const RatingScreen = ({ onComplete }) => {
               onClick={() => handleClick(index)}
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
-          > x
-              
-            </span> 
+          > 
+          <FontAwesomeIcon icon={index <= (hover || rating) ? solidStar : regularStar} /> 
+            </span>
           );
         })}
       </div>
