@@ -15,7 +15,7 @@ const ThankYouFeedbackScreen = () => {
       <div className="stars">
         {[...Array(5)].map((star, index) => (
           <span key={index}>
-            <FontAwesomeIcon icon={index < 3 ? solidStar : regularStar} /> 
+            <FontAwesomeIcon icon={"fa-regular fa-star"} /> 
           </span>
         ))}
       </div>
