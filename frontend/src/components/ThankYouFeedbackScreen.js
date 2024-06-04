@@ -1,5 +1,8 @@
+
 import React from 'react';
 import './css/ThankYouFeedbackScreen.css';
+
+
 
 const ThankYouFeedbackScreen = () => {
   return (
@@ -13,6 +16,7 @@ const ThankYouFeedbackScreen = () => {
       <div className="stars">
         {[...Array(5)].map((star, index) => (
           <span key={index}>x</span>
+
         ))}
       </div>
     </div>
