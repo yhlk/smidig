@@ -1,11 +1,11 @@
-
-
-body, html, p {
+body,
+html,
+p {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Remove scrollbar */
+  overflow: hidden; /* Remove scrollbars */
   height: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .login-container {
@@ -14,7 +14,7 @@ body, html, p {
   align-items: center;
   justify-content: flex-start; /* Align items to the start */
   min-height: 100vh;
-  background-color: #0B1215;
+  background-color: #0b1215;
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
@@ -55,7 +55,7 @@ form {
 }
 
 form input {
-  background-color: #B3B3B3;
+  background-color: #b3b3b3;
   padding: 10px;
   margin: 5px 0;
   border: none;
@@ -65,12 +65,12 @@ form input {
 }
 
 form input::placeholder {
-  font-family: 'Aldrich', sans-serif;
-  color: #FFFFFF; /* Set placeholder/background color in input field */
+  font-family: "Aldrich", sans-serif;
+  color: #ffffff; /* Set placeholder/background color in input field */
 }
 
 form button {
-  font-family: 'Aldrich', sans-serif;
+  font-family: "Aldrich", sans-serif;
   padding: 10px 20px;
   margin-top: 10px;
   background-color: #218838;
@@ -83,7 +83,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #6EE47E;
+  background-color: #6ee47e;
 }
 
 .login-footer {
