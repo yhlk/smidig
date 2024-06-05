@@ -20,7 +20,7 @@ function Login({ onLogin }) {
     };
 
     fetchGlobalSessionCode();
-  }, []);
+  }, [apiUrl]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -37,7 +37,7 @@ function Login({ onLogin }) {
       });
       const data = await response.json();
       if (response.ok) {
-        onLogin(data);
+        onLogin(data, userName); // Pass the username to the parent component
       } else {
         alert(data.message);
       }
