@@ -1,9 +1,12 @@
 .feedback{
-  font-size: 30px;
+  font-size: 50px;
   color: white;
+  margin-top: 3px;
 }
 
 .stars{
-  color: gold;
+  fill: gold;
+  font-size: 60px;
+  margin-top: 1px;
 }
   

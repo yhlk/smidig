@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './css/RatingScreen.css';
+import { RiStarSFill } from "react-icons/ri";
 
 const RatingScreen = ({ onComplete }) => {
   const [rating, setRating] = useState(0);
@@ -17,19 +18,20 @@ const RatingScreen = ({ onComplete }) => {
         <span className="user-label">Player</span>
       </div>
       <h1 className="title">LOADING</h1>
-      <h2 className='question1'>Sound?</h2>
-      <div className="stars">
+      <h2 className="question1">Sound?</h2>
+      <div className="stars1">
         {[...Array(5)].map((star, index) => {
-          index += 1;
+          const starIndex = index + 1;
           return (
             <span
-              key={index}
-              className = {index <= (hover || rating) ? 'star-on' : 'star-off'}
-              onClick={() => handleClick(index)}
-              onMouseEnter={() => setHover(index)}
+              key={starIndex}
+              className={starIndex <= (hover || rating) ? 'star-on' : 'star-off'}
+              onClick={() => handleClick(starIndex)}
+              onMouseEnter={() => setHover(starIndex)}
               onMouseLeave={() => setHover(rating)}
-          > 
-          x
+            >
+              <RiStarSFill
+              className={starIndex <= (hover || rating) ? 'star-on' : 'star-off'} />
             </span>
           );
         })}

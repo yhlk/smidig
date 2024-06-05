@@ -1,13 +1,15 @@
 .question1{
-  font-size: 30px;
+  font-size: 70px;
   color: white;
 }
-.stars{
-  font-size: 100px;
-  margin-top: 60px;
-  color: gold;
+.stars1{
+  font-size: 60px;
+  margin-top: 10px;
 }
 
-.stars:hover{
-  color: gold;
+.star-on{
+  fill: gold;
+}
+.star-off{
+  fill: white;
 }
