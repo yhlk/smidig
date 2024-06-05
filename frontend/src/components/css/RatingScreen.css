@@ -1,15 +1,18 @@
 .question1{
-  font-size: 70px;
+  font-size: 150px;
   color: white;
 }
 .stars1{
-  font-size: 60px;
-  margin-top: 10px;
+  font-size: 1px;
+  margin-top: -20px;
 }
 
 .star-on{
-  fill: gold;
+  fill: red;
 }
 .star-off{
   fill: white;
+}
+.App-logo{
+  margin-top: -30px;
 }

@@ -1,9 +1,9 @@
 .question1{
-  font-size: 70px;
+  font-size: 40px;
   color: white;
 }
 .stars1{
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 10px;
 }
 
@@ -12,4 +12,7 @@
 }
 .star-off{
   fill: white;
+}
+.App-logo{
+  margin-top: -30;
 }
