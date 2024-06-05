@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './css/RatingScreen3.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
 
 
 const RatingScreen3 = ({ onComplete, nickname }) => {

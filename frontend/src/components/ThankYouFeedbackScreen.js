@@ -12,7 +12,6 @@ const ThankYouFeedbackScreen = ({nickname}) => {
       </div>
       <h1 className="title">LOADING</h1>
       <h2>Thank you for your feedback</h2>
-      
     </div>
   );
 };

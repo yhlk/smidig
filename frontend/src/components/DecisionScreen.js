@@ -9,7 +9,7 @@ import imageLeave from '../leave.png';
 const DecisionScreen = ({ onDecisionComplete, nickname }) => {
   const [timeLeft, setTimeLeft] = useState(100);
   const [currentImage, setCurrentImage] = useState(untilImage);
-  const [hasClicked, setHasClicked] = useState(false);
+  const [hasClicked, sethasClicked] = useState(false);
 
   useEffect(() => {
     if (timeLeft > 0) {
@@ -23,13 +23,14 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
   }, [timeLeft, onDecisionComplete]);
 
   const handleOptionClick = (image) => {
-    if (!hasClicked) {
+    if (!hasClicked){
       setCurrentImage(image);
-      setHasClicked(true);
+      sethasClicked(true);
       setTimeout(() => {
-        onDecisionComplete();
-      }, 5000); // 5 seconds
-    }
+      onDecisionComplete();
+    }, 3000); // 5 seconds
+    
+    } 
   };
 
   return (
@@ -41,39 +42,15 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
       <h1>What should Magnus do next?</h1>
       <div className="options-container">
         <div className="left-options">
-          <button 
-            className="option-button purple" 
-            onClick={() => handleOptionClick(imageHide)} 
-            disabled={hasClicked}
-          >
-            HIDE
-          </button>
-          <button 
-            className="option-button red" 
-            onClick={() => handleOptionClick(imageKill)} 
-            disabled={hasClicked}
-          >
-            KILL
-          </button>
+          <button className="option-button purple" onClick={() => handleOptionClick(imageHide)} disabled={hasClicked}>HIDE</button>
+          <button className="option-button red" onClick={() => handleOptionClick(imageKill)} disabled={hasClicked}>KILL</button>
         </div>
         <div className="image-placeholder">
           <img src={currentImage} alt="What should Magnus do next decision screen" className="decision-image" />
         </div>
         <div className="right-options">
-          <button 
-            className="option-button blue" 
-            onClick={() => handleOptionClick(imageDoNothing)} 
-            disabled={hasClicked}
-          >
-            DO NOTHING
-          </button>
-          <button 
-            className="option-button green" 
-            onClick={() => handleOptionClick(imageLeave)} 
-            disabled={hasClicked}
-          >
-            LEAVE
-          </button>
+          <button className="option-button blue" onClick={() => handleOptionClick(imageDoNothing)} disabled={hasClicked}>DO NOTHING</button>
+          <button className="option-button green" onClick={() => handleOptionClick(imageLeave)} disabled={hasClicked}>LEAVE</button>
         </div>
       </div>
       <div className="timer">
