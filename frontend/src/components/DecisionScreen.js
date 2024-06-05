@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './css/DecisionScreen.css';
 import untilImage from '../until.png'; // Adjust the path according to your project structure
 
-const DecisionScreen = ({ onDecisionComplete }) => {
+const DecisionScreen = ({ onDecisionComplete, nickname }) => {
   const [timeLeft, setTimeLeft] = useState(100);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const DecisionScreen = ({ onDecisionComplete }) => {
     <div className="decision-screen">
       <div className="header">
         <span className="user-icon">🔹</span>
-        <span className="user-label">Player</span>
+        <span className="user-label">{nickname}</span>
       </div>
       <h1>What should Magnus do next?</h1>
       <div className="options-container">

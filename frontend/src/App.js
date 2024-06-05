@@ -121,12 +121,12 @@ function App() {
           </header>
           {screen === 'login' && <Login onLogin={handleLogin} />}
           {screen === 'loading' && <LoadingScreen onLoadingComplete={handleLoadingComplete} nickname={nickname} />}
-          {screen === 'decision' && <DecisionScreen onDecisionComplete={handleDecisionComplete} />}
-          {screen === 'thankyou' && <ThankYouScreen onReview={handleReview} />}
-          {screen === 'rating' && <RatingScreen onComplete={handleTheaterRating} />}
-          {screen === 'rating2' && <RatingScreen2 onComplete={handleThirdRating} />}
-          {screen === 'rating3' && <RatingScreen3 onComplete={handleFeedbackComplete} />}
-          {screen === 'thankyoufeedback' && <ThankYouFeedbackScreen />}
+          {screen === 'decision' && <DecisionScreen onDecisionComplete={handleDecisionComplete} nickname={nickname}/>}
+          {screen === 'thankyou' && <ThankYouScreen onReview={handleReview} nickname={nickname}/>}
+          {screen === 'rating' && <RatingScreen onComplete={handleTheaterRating} nickname={nickname}/>}
+          {screen === 'rating2' && <RatingScreen2 onComplete={handleThirdRating} nickname={nickname}/>}
+          {screen === 'rating3' && <RatingScreen3 onComplete={handleFeedbackComplete} nickname={nickname}/>}
+          {screen === 'thankyoufeedback' && <ThankYouFeedbackScreen nickname={nickname}/>}
         </div>
       )}
     </>
