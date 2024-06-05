@@ -10,9 +10,17 @@ function Login({ onLogin, code }) {
     onLogin(nickname, inputCode);
   };
 
+  const handleNicknameChange = (e) => {
+    const { value } = e.target;
+    const lettersOnly = value.replace(/[^a-zA-Z]/g, ''); // Remove non-letter characters
+    if (lettersOnly.length <= 8) {
+      setNickname(lettersOnly);
+    }
+  };
+
   return (
     <div className="login-container">
-      <header className="login-header"> 
+      <header className="login-header">
       </header>
       <div className="login-content">
         <p>Enter Nickname and code to join the live experience</p>
@@ -23,7 +31,7 @@ function Login({ onLogin, code }) {
             type="text"
             placeholder="Choose a nickname"
             value={nickname}
-            onChange={(e) => setNickname(e.target.value)}
+            onChange={handleNicknameChange}
             required
           />
           <input
