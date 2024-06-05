@@ -6,12 +6,12 @@ function Login({ onLogin }) {
   const [sessionCode, setSessionCode] = useState("");
   const [globalSessionCode, setGlobalSessionCode] = useState("");
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     const fetchGlobalSessionCode = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:5000/api/sessions/generate"
-        );
+        const response = await fetch(`${apiUrl}/sessions/generate`);
         const data = await response.json();
         setGlobalSessionCode(data.enteringCode);
       } catch (error) {
@@ -25,7 +25,7 @@ function Login({ onLogin }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/sessions/login", {
+      const response = await fetch(`${apiUrl}/sessions/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
