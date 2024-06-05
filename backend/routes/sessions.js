@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
+import mongoose from "mongoose";
+import Session from "../models/Session.js";
+import Question from "../models/Question.js";
+import Choice from "../models/Choice.js";
+import User from "../models/User.js";
+
 const router = express.Router();
-const mongoose = require("mongoose");
-const Session = require("../models/Session");
-const Question = require("../models/Question");
-const Choice = require("../models/Choice");
-const User = require("../models/User");
 
 let globalSessionCode = null;
 let sessionId = null;
@@ -97,4 +98,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

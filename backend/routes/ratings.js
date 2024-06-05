@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Rating from "../models/Rating.js";
+
 const router = express.Router();
-const Rating = require("../models/Rating");
 
 router.post("/", async (req, res) => {
   const { question, user_id, score, feedback } = req.body;
@@ -21,4 +22,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

@@ -1,8 +1,10 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const ChoiceSchema = new mongoose.Schema({
   answers: { type: String, required: true },
   question_id: { type: mongoose.Schema.Types.ObjectId, ref: "Question" },
 });
 
-module.exports = mongoose.model("Choice", ChoiceSchema);
+const Choice = mongoose.model("Choice", ChoiceSchema);
+
+export default Choice;

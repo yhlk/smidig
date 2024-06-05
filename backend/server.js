@@ -1,15 +1,18 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from "dotenv";
 
-const users = require("./routes/users");
-const sessions = require("./routes/sessions");
-const questions = require("./routes/questions");
-const choices = require("./routes/choices");
-const results = require("./routes/results");
-const ratings = require("./routes/ratings");
-require("dotenv").config();
+dotenv.config();
+
+// Import routes
+import users from "./routes/users.js";
+import sessions from "./routes/sessions.js";
+import questions from "./routes/questions.js";
+import choices from "./routes/choices.js";
+import results from "./routes/results.js";
+import ratings from "./routes/ratings.js";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -21,7 +24,7 @@ app.use(bodyParser.json());
 // Connect to MongoDB here
 const mongoUrl = process.env.MONGO_URL;
 mongoose
-  .connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoUrl)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 

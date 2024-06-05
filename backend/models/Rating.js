@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const RatingSchema = new mongoose.Schema({
   question: { type: String, required: true },
@@ -7,4 +7,6 @@ const RatingSchema = new mongoose.Schema({
   feedback: { type: String },
 });
 
-module.exports = mongoose.model("Rating", RatingSchema);
+const Rating = mongoose.model("Rating", RatingSchema);
+
+export default Rating;
