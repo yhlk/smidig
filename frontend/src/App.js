@@ -88,7 +88,7 @@ function App() {
   }, []);
 
   const generateNewCode = () => {
-    const randomCode = Math.floor(10000 + Math.random() * 90000).toString(); // Generate a 5-digit random code
+    const randomCode = Math.floor(1000 + Math.random() * 9000).toString(); // Generate a 5-digit random code
     localStorage.setItem('sessionCode', randomCode);
     setCode(randomCode);
     console.log("Generated Code: ", randomCode); // For debugging purposes
@@ -127,12 +127,6 @@ function App() {
     setScreen('thankyoufeedback');
   };
 
-  const startNewSession = () => {
-    localStorage.removeItem('sessionCode');
-    generateNewCode();
-    setScreen('login');
-  };
-
   return (
     <>
       {isPortrait ? (
@@ -152,7 +146,6 @@ function App() {
           {screen === 'rating2' && <RatingScreen2 onComplete={handleThirdRating} nickname={nickname} />}
           {screen === 'rating3' && <RatingScreen3 onComplete={handleFeedbackComplete} nickname={nickname} />}
           {screen === 'thankyoufeedback' && <ThankYouFeedbackScreen nickname={nickname} />}
-          <button onClick={startNewSession}>Start New Session</button>
         </div>
       )}
     </>
