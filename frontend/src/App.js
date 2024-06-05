@@ -127,11 +127,7 @@ function App() {
     setScreen('thankyoufeedback');
   };
 
-  const startNewSession = () => {
-    localStorage.removeItem('sessionCode');
-    generateNewCode();
-    setScreen('login');
-  };
+ 
 
   return (
     <>
@@ -152,7 +148,7 @@ function App() {
           {screen === 'rating2' && <RatingScreen2 onComplete={handleThirdRating} nickname={nickname} />}
           {screen === 'rating3' && <RatingScreen3 onComplete={handleFeedbackComplete} nickname={nickname} />}
           {screen === 'thankyoufeedback' && <ThankYouFeedbackScreen nickname={nickname} />}
-          <button onClick={startNewSession}>Start New Session</button>
+          
         </div>
       )}
     </>

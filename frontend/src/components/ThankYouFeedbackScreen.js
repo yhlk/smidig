@@ -12,11 +12,7 @@ const ThankYouFeedbackScreen = ({nickname}) => {
       </div>
       <h1 className="title">LOADING</h1>
       <h2>Thank you for your feedback</h2>
-      <div className="stars">
-        {[...Array(5)].map((star, index) => (
-          <span key={index}>x</span>
-        ))}
-      </div>
+      
     </div>
   );
 };
