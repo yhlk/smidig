@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 // Serve static files from the React app
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, "frontend", "build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 // Use routes
 app.use("/api/users", users);
@@ -38,7 +38,7 @@ app.use("/api/ratings", ratings);
 
 // Catch-all handler to serve the React app
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
 
 // Connect to MongoDB
