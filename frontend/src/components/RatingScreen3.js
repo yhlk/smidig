@@ -3,6 +3,7 @@ import './css/RatingScreen3.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
 
+
 const RatingScreen3 = ({ onComplete, nickname }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
