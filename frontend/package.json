@@ -21,7 +21,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start --host 0.0.0.0",
-    "build": "parcel build index.html",
+    "build": "parcel build public/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
