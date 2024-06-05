@@ -68,7 +68,7 @@ function Login({ onLogin }) {
           />
           <input
             type="text"
-            placeholder="1234 5678"
+            placeholder="Enter session code"
             value={sessionCode}
             onChange={(e) => setSessionCode(e.target.value)}
             required

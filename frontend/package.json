@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongoose": "^8.4.0",
+    "parcel": "^2.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -20,7 +21,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start --host 0.0.0.0",
-    "build": "react-scripts build",
+    "build": "parcel build index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
