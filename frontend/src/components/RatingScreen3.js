@@ -3,7 +3,7 @@ import './css/RatingScreen3.css';
 import { RiStarSFill } from "react-icons/ri";
 
 
-const RatingScreen3 = ({ onComplete }) => {
+const RatingScreen3 = ({ onComplete, userName }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
@@ -16,7 +16,7 @@ const RatingScreen3 = ({ onComplete }) => {
     <div className="rating-screen3">
       <div className="Player-icon">
         <span className="user-icon">🔹</span>
-        <span className="user-label">Player</span>
+        <span className="user-label">{userName}</span>
       </div>
       <h1 className="title">LOADING</h1>
       <h2 className='question1'>User experience?</h2>

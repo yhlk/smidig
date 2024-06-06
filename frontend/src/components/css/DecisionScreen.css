@@ -34,8 +34,8 @@ body, html {
 }
 
 .user-icon {
-  margin-right: 5px;
-  margin-top: -6px;
+  margin-right: 1px;
+  margin-top: -2px;
   font-size: large;
 }
 
@@ -136,6 +136,12 @@ h1 {
   border-top: 4px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+.option-button.dark {
+  background-color: #555;
+  color: #ddd;
+  opacity: 50%;
 }
 
 @keyframes spin {
