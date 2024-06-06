@@ -46,7 +46,6 @@ body, html {
   margin-top: -8px;
 }
 
-
 h1 {
   color: white;
   margin: -65px 0; /* Adjust margin as needed */
@@ -141,4 +140,10 @@ h1 {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.option-button.dark {
+  background-color: #555;
+  color: #ddd;
+  opacity: 50%;
 }
