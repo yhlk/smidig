@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/RatingScreen.css';
-
+import { RiStarSFill } from "react-icons/ri";
 
 const RatingScreen = ({ onComplete, userName }) => {
   const [rating, setRating] = useState(0);
@@ -30,7 +30,8 @@ const RatingScreen = ({ onComplete, userName }) => {
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
           > 
-          x
+          <RiStarSFill
+              className={starIndex <= (hover || rating) ? 'star-on' : 'star-off'} />
             </span>
           );
         })}
