@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './css/Login.css';
 
-function Login({ onLogin, code }) {
+function Login({ onLogin, code}) {
   const [nickname, setNickname] = useState('');
-  const [inputCode, setInputCode] = useState('');
+ const [inputCode, setInputCode] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onLogin(nickname, inputCode);
+    onLogin(nickname , inputCode);
   };
 
   const handleNicknameChange = (e) => {
@@ -24,7 +24,7 @@ function Login({ onLogin, code }) {
       </header>
       <div className="login-content">
         <p>Enter Nickname and code to join the live experience</p>
-        <small>Your code is displayed on the main screen: {code}</small>
+        <small>Your code is displayed on the main screen: {code} </small>
         <form onSubmit={handleSubmit}>
           <input
             id="nickname"

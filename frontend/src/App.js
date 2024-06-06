@@ -74,6 +74,7 @@ function App() {
     };
   }, []);
 
+  
   useEffect(() => {
     const fetchCode = () => {
       const existingCode = localStorage.getItem('sessionCode');
