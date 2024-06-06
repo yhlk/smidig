@@ -7,7 +7,7 @@ import imageDoNothing from '../doNothing.png';
 import imageLeave from '../leave.png';
 
 const DecisionScreen = ({ userName, onDecisionComplete }) => {
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(30);
   const [currentImage, setCurrentImage] = useState(untilImage);
   const [hasClicked, setHasClicked] = useState(false);
   const [clickedButton, setClickedButton] = useState(null);
@@ -43,17 +43,11 @@ const DecisionScreen = ({ userName, onDecisionComplete }) => {
           <button
             className={`option-button purple ${clickedButton && clickedButton !== 'hide' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageHide, 'hide')}
-            disabled={hasClicked}
-          >
-            HIDE
-          </button>
+            disabled={hasClicked}>HIDE</button>
           <button
             className={`option-button red ${clickedButton && clickedButton !== 'kill' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageKill, 'kill')}
-            disabled={hasClicked}
-          >
-            KILL
-          </button>
+            disabled={hasClicked}>KILL</button>
         </div>
         <div className="image-placeholder">
           <img src={currentImage} alt="What should Magnus do next decision screen" className="decision-image" />
@@ -62,17 +56,11 @@ const DecisionScreen = ({ userName, onDecisionComplete }) => {
           <button
             className={`option-button blue ${clickedButton && clickedButton !== 'doNothing' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageDoNothing, 'doNothing')}
-            disabled={hasClicked}
-          >
-            DO NOTHING
-          </button>
+            disabled={hasClicked}>DO NOTHING</button>
           <button
             className={`option-button green ${clickedButton && clickedButton !== 'leave' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageLeave, 'leave')}
-            disabled={hasClicked}
-          >
-            LEAVE
-          </button>
+            disabled={hasClicked}>LEAVE</button>
         </div>
       </div>
       <div className="timer">
