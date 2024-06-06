@@ -161,17 +161,28 @@ function App() {
             />
           )}{" "}
           {/* Pass the username */}
-          {screen === "thankyou" && <ThankYouScreen onReview={handleReview} />}
+          {screen === "thankyou" && 
+            <ThankYouScreen 
+              userName={username} 
+              onReview={handleReview} />}
           {screen === "rating" && (
-            <RatingScreen onComplete={handleTheaterRating} />
+            <RatingScreen 
+              userName={username}
+              onComplete={handleTheaterRating} />
           )}
           {screen === "rating2" && (
-            <RatingScreen2 onComplete={handleThirdRating} />
+            <RatingScreen2 
+              userName={username}
+              onComplete={handleThirdRating} />
           )}
           {screen === "rating3" && (
-            <RatingScreen3 onComplete={handleFeedbackComplete} />
+            <RatingScreen3 
+              userName={username}
+              onComplete={handleFeedbackComplete} />
           )}
-          {screen === "thankyoufeedback" && <ThankYouFeedbackScreen />}
+          {screen === "thankyoufeedback" && 
+            <ThankYouFeedbackScreen 
+              userName={username}/>}
         </div>
       )}
     </>

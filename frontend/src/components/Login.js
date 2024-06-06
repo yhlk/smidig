@@ -22,6 +22,13 @@ function Login({ onLogin }) {
     fetchGlobalSessionCode();
   }, [apiUrl]);
 
+  /*const handleNicknameChange = (e) => {
+    const { value } = e.target;
+    const lettersOnly = value.replace(/[^a-zA-Z]/g, ''); // Remove non-letter characters
+    if (lettersOnly.length <= 8) {
+      setNickname(lettersOnly);
+    }*/ 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
