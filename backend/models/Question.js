@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const QuestionSchema = new mongoose.Schema({
   question: { type: String, required: true },
@@ -6,4 +6,6 @@ const QuestionSchema = new mongoose.Schema({
   session_id: { type: mongoose.Schema.Types.ObjectId, ref: "Session" },
 });
 
-module.exports = mongoose.model("Question", QuestionSchema);
+const Question = mongoose.model("Question", QuestionSchema);
+
+export default Question;

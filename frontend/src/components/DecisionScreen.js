@@ -6,7 +6,7 @@ import imageKill from '../kill.png';
 import imageDoNothing from '../doNothing.png';
 import imageLeave from '../leave.png';
 
-const DecisionScreen = ({ onDecisionComplete, nickname }) => {
+const DecisionScreen = ({ userName, onDecisionComplete }) => {
   const [timeLeft, setTimeLeft] = useState(100);
   const [currentImage, setCurrentImage] = useState(untilImage);
   const [hasClicked, sethasClicked] = useState(false);
@@ -37,7 +37,7 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
     <div className="decision-screen">
       <div className="header">
         <span className="user-icon">🔹</span>
-        <span className="user-label">{nickname}</span>
+        <span className="user-label">{userName}</span>
       </div>
       <h1>What should Magnus do next?</h1>
       <div className="options-container">
@@ -55,7 +55,8 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
       </div>
       <div className="timer">
         <div className="clock"></div>
-        Time left: <span id="timer">{timeLeft < 10 ? `0${timeLeft}` : timeLeft}</span> sec
+        Time left:{" "}
+        <span id="timer">{timeLeft < 10 ? `0${timeLeft}` : timeLeft}</span> sec
       </div>
     </div>
   );

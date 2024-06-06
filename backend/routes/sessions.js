@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
+import mongoose from "mongoose";
+import Session from "../models/Session.js";
+import Question from "../models/Question.js";
+import Choice from "../models/Choice.js";
+import User from "../models/User.js";
+
 const router = express.Router();
-const mongoose = require("mongoose");
-const Session = require("../models/Session");
-const Question = require("../models/Question");
-const Choice = require("../models/Choice");
-const User = require("../models/User");
 
 let globalSessionCode = null;
 let sessionId = null;
@@ -26,7 +27,7 @@ const generateGlobalSessionCode = async () => {
         `Session saved with code: ${globalSessionCode} and ID: ${sessionId}`
       );
 
-      //Ex questions and choices, change later
+      // Example questions and choices
       const choice1 = new Choice({ answers: "Red" });
       const choice2 = new Choice({ answers: "Blue" });
       const choice3 = new Choice({ answers: "Green" });
@@ -62,8 +63,8 @@ router.get("/generate", (req, res) => {
   }
 });
 
-//Check if a session is not found and if a student already exists
-//If a student doesn't exist create one
+// Check if a session is not found and if a user already exists
+// If a user doesn't exist create one
 router.post("/login", async (req, res) => {
   const { user_name, session_code } = req.body;
 
@@ -75,7 +76,7 @@ router.post("/login", async (req, res) => {
 
     const existingUser = await User.findOne({
       user_name,
-      session: session._id,
+      session_id: session._id,
     });
     if (existingUser) {
       return res
@@ -83,7 +84,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "User already exists in this session" });
     }
 
-    const user = new User({ user_name, session: session._id });
+    const user = new User({ user_name, session_id: session._id });
     await user.save();
 
     const questions = await Question.find({ session_id: session._id }).populate(
@@ -97,4 +98,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
