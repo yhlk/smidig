@@ -1,7 +1,5 @@
 import React from 'react';
 import './css/ThankYouFeedbackScreen.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
 
 const ThankYouFeedbackScreen = ({userName}) => {
   return (
