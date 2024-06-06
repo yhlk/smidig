@@ -1,13 +1,19 @@
-.question1{
-  font-size: 70px;
+.question{
+  font-size: 40px;
   color: white;
 }
 .stars{
-  font-size: 100px;
-  margin-top: 60px;
-  color: gold;
+  font-size: 40px;
+  margin-top: 10px;
 }
 
-.stars:hover{
-  color: gold;
+.star-on{
+  fill: gold;
+}
+.star-off{
+  fill: white;
+}
+
+.rating-screen{
+  margin-bottom: 130px;
 }

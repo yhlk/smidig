@@ -31,7 +31,7 @@ const RatingScreen = ({ onComplete, userName }) => {
               onMouseLeave={() => setHover(rating)}
           > 
           <RiStarSFill
-              className={starIndex <= (hover || rating) ? 'star-on' : 'star-off'} />
+              className={index <= (hover || rating) ? 'star-on' : 'star-off'} />
             </span>
           );
         })}
