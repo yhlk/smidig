@@ -1,0 +1,24 @@
+{
+  "name": "smidig",
+  "version": "1.0.0",
+  "description": "\"# Smidig project\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently npm:dev:frontend npm:dev:backend",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "postinstall": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install --include=dev",
+    "install:backend": "cd backend && npm install --include=dev",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

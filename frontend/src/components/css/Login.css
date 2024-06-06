@@ -5,7 +5,7 @@ p {
   padding: 0;
   overflow: hidden; /* Remove scrollbars */
   height: 100%;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
 .login-container {
@@ -14,8 +14,8 @@ p {
   align-items: center;
   justify-content: flex-start; /* Align items to the start */
   min-height: 100vh;
-  background-color: #0b1215;
-  color: #ffffff;
+  background-color: rgb(11, 18, 21);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px 0;
 }
@@ -55,7 +55,7 @@ form {
 }
 
 form input {
-  background-color: #b3b3b3;
+  background-color: rgb(179, 179, 179);
   padding: 10px;
   margin: 5px 0;
   border: none;
@@ -66,15 +66,15 @@ form input {
 
 form input::placeholder {
   font-family: "Aldrich", sans-serif;
-  color: #ffffff; /* Set placeholder/background color in input field */
+  color: rgb(255, 255, 255); /* Set placeholder/background color in input field */
 }
 
 form button {
   font-family: "Aldrich", sans-serif;
   padding: 10px 20px;
   margin-top: 10px;
-  background-color: #218838;
-  color: #fff;
+  background-color: rgb(33, 136, 56);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -83,7 +83,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #6ee47e;
+  background-color: rgb(110, 228, 126);
 }
 
 .login-footer {

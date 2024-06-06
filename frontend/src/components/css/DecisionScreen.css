@@ -4,7 +4,7 @@ body, html {
   overflow: hidden; /* Remove scrollbar */
   height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #0B1215;
+  background-color: rgb(11, 18, 21);
   color: white;
   display: flex;
   justify-content: center;
@@ -40,14 +40,14 @@ body, html {
 }
 
 .user-label {
-  background-color: #0B1215;
+  background-color: rgb(11, 18, 21);
   padding: 10px;
   border-radius: 5px;
   margin-top: -8px;
 }
 
 h1 {
-  color: white;
+  color: rgb(255, 255, 255);
   margin: -65px 0; /* Adjust margin as needed */
   padding: 0; /* Remove padding to eliminate space */
   z-index: 1; /* Ensure h1 is above other content */
@@ -75,24 +75,24 @@ h1 {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 210px;
 }
 
 .purple {
-  background-color: #6a0dad;
+  background-color: rgb(106, 13, 173);
 }
 
 .red {
-  background-color: #ff0000;
+  background-color: rgb(161, 44, 0);
 }
 
 .blue {
-  background-color: #0000ff;
+  background-color: rgb(9, 136, 227);
 }
 
 .green {
-  background-color: #00ff00;
+  background-color: rgb(10, 87, 46);
 }
 
 .image-placeholder {
@@ -101,9 +101,9 @@ h1 {
   align-items: center;
   width: 300px;
   height: 130px;
-  background-color: #0b1215;
+  background-color: rgb(11, 18, 21);
   border-radius: 10px;
-  color: #555;
+  color: rgb(85, 85, 85);
   font-size: 18px;
   z-index: 1; /* Ensure image is above other content */
   margin-bottom: -30px;
@@ -135,6 +135,12 @@ h1 {
   border-top: 4px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+.option-button.dark {
+  background-color: #555;
+  color: #ddd;
+  opacity: 50%;
 }
 
 @keyframes spin {

@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Result from "../models/Result.js";
+
 const router = express.Router();
-const Result = require("../models/Result");
 
 router.post("/", async (req, res) => {
   const { question_id, choice_id, user_id } = req.body;
@@ -20,4 +21,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

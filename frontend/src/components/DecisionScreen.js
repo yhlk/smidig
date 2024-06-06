@@ -6,8 +6,8 @@ import imageKill from '../kill.png';
 import imageDoNothing from '../doNothing.png';
 import imageLeave from '../leave.png';
 
-const DecisionScreen = ({ onDecisionComplete, nickname }) => {
-  const [timeLeft, setTimeLeft] = useState(5);
+const DecisionScreen = ({ userName, onDecisionComplete }) => {
+  const [timeLeft, setTimeLeft] = useState(30);
   const [currentImage, setCurrentImage] = useState(untilImage);
   const [hasClicked, setHasClicked] = useState(false);
   const [clickedButton, setClickedButton] = useState(null);
@@ -24,18 +24,18 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
   }, [timeLeft, onDecisionComplete]);
 
   const handleOptionClick = (image, button) => {
-    if (!hasClicked){
+    if (!hasClicked) {
       setCurrentImage(image);
       setHasClicked(true);
       setClickedButton(button);
-    } 
+    }
   };
 
   return (
     <div className="decision-screen">
       <div className="header">
         <span className="user-icon">🔹</span>
-        <span className="user-label">{nickname}</span>
+        <span className="user-label">{userName}</span>
       </div>
       <h1>What should Magnus do next?</h1>
       <div className="options-container">
@@ -43,17 +43,11 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
           <button
             className={`option-button purple ${clickedButton && clickedButton !== 'hide' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageHide, 'hide')}
-            disabled={hasClicked}
-          >
-            HIDE
-          </button>
+            disabled={hasClicked}>HIDE</button>
           <button
             className={`option-button red ${clickedButton && clickedButton !== 'kill' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageKill, 'kill')}
-            disabled={hasClicked}
-          >
-            KILL
-          </button>
+            disabled={hasClicked}>KILL</button>
         </div>
         <div className="image-placeholder">
           <img src={currentImage} alt="What should Magnus do next decision screen" className="decision-image" />
@@ -62,17 +56,11 @@ const DecisionScreen = ({ onDecisionComplete, nickname }) => {
           <button
             className={`option-button blue ${clickedButton && clickedButton !== 'doNothing' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageDoNothing, 'doNothing')}
-            disabled={hasClicked}
-          >
-            DO NOTHING
-          </button>
+            disabled={hasClicked}>DO NOTHING</button>
           <button
             className={`option-button green ${clickedButton && clickedButton !== 'leave' ? 'dark' : ''}`}
             onClick={() => handleOptionClick(imageLeave, 'leave')}
-            disabled={hasClicked}
-          >
-            LEAVE
-          </button>
+            disabled={hasClicked}>LEAVE</button>
         </div>
       </div>
       <div className="timer">

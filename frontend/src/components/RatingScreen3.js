@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
 
 
-const RatingScreen3 = ({ onComplete, nickname }) => {
+const RatingScreen3 = ({ onComplete, userName }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
@@ -17,7 +17,7 @@ const RatingScreen3 = ({ onComplete, nickname }) => {
     <div className="rating-screen3">
       <div className="Player-icon">
         <span className="user-icon">🔹</span>
-        <span className="user-label">{nickname}</span>
+        <span className="user-label">{userName}</span>
       </div>
       <h1 className="title">LOADING</h1>
       <h2 className='question'>User experience?</h2>

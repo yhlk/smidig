@@ -1,16 +1,16 @@
 .question{
   font-size: 70px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 
 .star-on {
-  color: gold;
+  color: rgb(255, 215, 0);
   
 }
 
 .star-off {
-  color: #ccc; 
+  color: rgb(204, 204, 204); 
 
 }
 .stars{
