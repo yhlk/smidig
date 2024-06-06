@@ -7,7 +7,7 @@ import imageDoNothing from '../doNothing.png';
 import imageLeave from '../leave.png';
 
 const DecisionScreen = ({ userName, onDecisionComplete }) => {
-  const [timeLeft, setTimeLeft] = useState(100);
+  const [timeLeft, setTimeLeft] = useState(30);
   const [currentImage, setCurrentImage] = useState(untilImage);
   const [hasClicked, sethasClicked] = useState(false);
 
@@ -28,7 +28,7 @@ const DecisionScreen = ({ userName, onDecisionComplete }) => {
       sethasClicked(true);
       setTimeout(() => {
       onDecisionComplete();
-    }, 3000); // 5 seconds
+    }, 20000); // 20 seconds
     
     } 
   };
