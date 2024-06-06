@@ -1,13 +1,13 @@
 .question1{
   font-size: 70px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .stars{
   font-size: 100px;
   margin-top: 60px;
-  color: gold;
+  color: rgb(255, 215, 0);
 }
 
 .stars:hover{
-  color: gold;
+  color: rgb(255, 215, 0);
 }
