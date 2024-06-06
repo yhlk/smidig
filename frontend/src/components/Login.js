@@ -12,9 +12,9 @@ function Login({ onLogin, code }) {
 
   const handleNicknameChange = (e) => {
     const { value } = e.target;
-    const lettersOnly = value.replace(/[^a-zA-Z]/g, ''); // Remove non-letter characters
-    if (lettersOnly.length <= 8) {
-      setNickname(lettersOnly);
+    const alphanumericOnly = value.replace(/[^a-zA-Z0-9]/g, ''); // Remove non-alphanumeric characters
+    if (alphanumericOnly.length <= 8) {
+      setNickname(alphanumericOnly);
     }
   };
 
@@ -35,7 +35,7 @@ function Login({ onLogin, code }) {
             required
           />
           <input
-            type="number"
+            type="text"
             placeholder="12345"
             value={inputCode}
             onChange={(e) => setInputCode(e.target.value)}

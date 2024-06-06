@@ -59,7 +59,6 @@ function App() {
   const [screen, setScreen] = useState('login');
   const [isPortrait, setIsPortrait] = useState(window.innerHeight > window.innerWidth);
   const [nickname, setNickname] = useState(''); // State for nickname
-  const [code, setCode] = useState(''); // State for code
 
   useFullScreenAndOrientation(); // Use the custom hook to prompt full-screen
 
@@ -74,33 +73,9 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    const fetchCode = () => {
-      const existingCode = localStorage.getItem('sessionCode');
-      if (existingCode) {
-        setCode(existingCode);
-      } else {
-        generateNewCode();
-      }
-    };
-
-    fetchCode();
-  }, []);
-
-  const generateNewCode = () => {
-    const randomCode = Math.floor(1000 + Math.random() * 9000).toString(); // Generate a 5-digit random code
-    localStorage.setItem('sessionCode', randomCode);
-    setCode(randomCode);
-    console.log("Generated Code: ", randomCode); // For debugging purposes
-  };
-
-  const handleLogin = (nickname, inputCode) => {
-    if (inputCode === code) {
-      setNickname(nickname); // Set nickname
-      setScreen('loading');
-    } else {
-      alert('Invalid code. Please try again.');
-    }
+  const handleLogin = (nickname) => {
+    setNickname(nickname); // Set nickname
+    setScreen('loading');
   };
 
   const handleLoadingComplete = () => {
@@ -138,7 +113,7 @@ function App() {
           <header className={`App-header ${screen === 'decision' ? 'decision' : 'default'}`}>
             <img src={image} alt="Logo" className="App-logo" />
           </header>
-          {screen === 'login' && <Login onLogin={handleLogin} code={code} />}
+          {screen === 'login' && <Login onLogin={handleLogin} />}
           {screen === 'loading' && <LoadingScreen onLoadingComplete={handleLoadingComplete} nickname={nickname} />}
           {screen === 'decision' && <DecisionScreen onDecisionComplete={handleDecisionComplete} nickname={nickname} />}
           {screen === 'thankyou' && <ThankYouScreen onReview={handleReview} nickname={nickname} />}
