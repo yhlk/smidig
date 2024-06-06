@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './css/RatingScreen2.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as solidStar, faStar as regularStar } from '@fortawesome/free-solid-svg-icons';
+import { RiStarSFill } from "react-icons/ri";
 
 const RatingScreen2 = ({ onComplete, userName }) => {
   const [rating, setRating] = useState(0);
@@ -31,7 +30,8 @@ const RatingScreen2 = ({ onComplete, userName }) => {
               onMouseEnter={() => setHover(index)}
               onMouseLeave={() => setHover(rating)}
             >
-              <FontAwesomeIcon icon={index <= (hover || rating) ? solidStar : regularStar} /> 
+              <RiStarSFill
+              className={index <= (hover || rating) ? 'star-on' : 'star-off'} />
             </span>
           );
         })}

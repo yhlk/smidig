@@ -1,21 +1,19 @@
 .question{
-  font-size: 70px;
-  color: rgb(255, 255, 255);
-}
-
-
-.star-on {
-  color: rgb(255, 215, 0);
-  
-}
-
-.star-off {
-  color: rgb(204, 204, 204); 
-
+  font-size: 40px;
+  color: white;
 }
 .stars{
-  font-size: 100px;
-  margin-top: 60px;
+  font-size: 40px;
+  margin-top: 10px;
 }
 
-  
+.star-on{
+  fill: gold;
+}
+.star-off{
+  fill: white;
+}
+
+.rating-screen2{
+  margin-bottom: 130px;
+}

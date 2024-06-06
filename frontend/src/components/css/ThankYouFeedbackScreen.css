@@ -3,7 +3,10 @@
   color: rgb(255, 255, 255);
 }
 
-.stars{
-  color: rgb(255, 215, 0);
+.rating-screen{
+  margin-bottom: 130px;
+}
+.thankyou-feedback-screen{
+  margin-bottom: 130px;
 }
   
