@@ -6,12 +6,12 @@ function Login({ onLogin }) {
   const [sessionCode, setSessionCode] = useState("");
   const [globalSessionCode, setGlobalSessionCode] = useState("");
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     const fetchGlobalSessionCode = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:5000/api/sessions/generate"
-        );
+        const response = await fetch(`${apiUrl}/sessions/generate`);
         const data = await response.json();
         setGlobalSessionCode(data.enteringCode);
       } catch (error) {
@@ -20,12 +20,12 @@ function Login({ onLogin }) {
     };
 
     fetchGlobalSessionCode();
-  }, []);
+  }, [apiUrl]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/sessions/login", {
+      const response = await fetch(`${apiUrl}/sessions/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function Login({ onLogin }) {
       });
       const data = await response.json();
       if (response.ok) {
-        onLogin(data);
+        onLogin(data, userName); // Pass the username to the parent component
       } else {
         alert(data.message);
       }
@@ -68,7 +68,7 @@ function Login({ onLogin }) {
           />
           <input
             type="text"
-            placeholder="1234 5678"
+            placeholder="Enter session code"
             value={sessionCode}
             onChange={(e) => setSessionCode(e.target.value)}
             required

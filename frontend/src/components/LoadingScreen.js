@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import './css/LoadingScreen.css';
+import React, { useState, useEffect } from "react";
+import "./css/LoadingScreen.css";
 
-const LoadingScreen = ({ onLoadingComplete, question }) => {
+const LoadingScreen = ({ onLoadingComplete, question, userName }) => {
   const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCountdown(prevCountdown => {
+      setCountdown((prevCountdown) => {
         if (prevCountdown > 0) {
           return prevCountdown - 1;
         } else {
@@ -29,7 +29,7 @@ const LoadingScreen = ({ onLoadingComplete, question }) => {
     <div className="loading-screen">
       <div className="Player-icon">
         <span className="user-icon">🔹</span>
-        <span className="user-label">Player</span>
+        <span className="user-label">{userName}</span>
       </div>
       <div className="question">{question}</div>
       <div className="stopwatch">
@@ -39,7 +39,7 @@ const LoadingScreen = ({ onLoadingComplete, question }) => {
         {[...Array(10)].map((_, index) => (
           <div
             key={index}
-            className={`dot ${index < countdown ? 'active' : ''}`}
+            className={`dot ${index < countdown ? "active" : ""}`}
           ></div>
         ))}
       </div>
