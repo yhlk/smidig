@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/ThankYouScreen.css';
 
-const ThankYouScreen = ({ onReview }) => {
+const ThankYouScreen = ({ onReview, userName }) => {
   return (
     <><div className="thankyou-screen">
       <h1 className="title">Thank you for playing!</h1>
@@ -9,7 +9,7 @@ const ThankYouScreen = ({ onReview }) => {
       <button className="review-button" onClick={onReview}>Review</button>
     </div><div className="Player-icon">
         <span className="user-icon">🔹</span>
-        <span className="user-label">Player</span>
+        <span className="user-label">{userName}</span>
       </div></>
   );
 };
