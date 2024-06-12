@@ -1,7 +1,8 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Remove scrollbar */
+  overflow: hidden;
   height: 100%;
   font-family: Arial, sans-serif;
   background-color: rgb(11, 18, 21);
@@ -17,7 +18,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  justify-content: flex-start; /* Align items to the start */
+  justify-content: flex-start;
   padding: 20px 0;
   margin: 0;
   position: relative;
@@ -30,7 +31,7 @@ body, html {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1; /* Ensure header is above other content */
+  z-index: 1;
 }
 
 .user-icon {
@@ -46,24 +47,24 @@ body, html {
   margin-top: -8px;
 }
 
-
 h1 {
   color: rgb(255, 255, 255);
-  margin: -65px 0; /* Adjust margin as needed */
-  padding: 0; /* Remove padding to eliminate space */
-  z-index: 1; /* Ensure h1 is above other content */
+  margin: -65px 0;
+  padding: 0;
+  z-index: 1;
 }
 
 .options-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Space between the columns */
-  margin-top: 100px; /* Adjust margin as needed */
-  z-index: 1; /* Ensure options are above other content */
+  gap: 40px;
+  margin-top: 100px;
+  z-index: 1;
 }
 
-.left-options, .right-options {
+.left-options,
+.right-options {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -106,7 +107,7 @@ h1 {
   border-radius: 10px;
   color: rgb(85, 85, 85);
   font-size: 18px;
-  z-index: 1; /* Ensure image is above other content */
+  z-index: 1;
   margin-bottom: -30px;
 }
 
@@ -117,7 +118,7 @@ h1 {
 }
 
 .timer {
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -145,6 +146,10 @@ h1 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
